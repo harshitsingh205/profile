@@ -17,6 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harshit Singh Narendrapur Siwan - Let's Connect and Innovate</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script type="application/ld+json">
         {
           "@context": "http://schema.org",
@@ -35,6 +36,7 @@
           ]
         }
         </script>
+        <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
     <style>
        body {
             font-family: 'Arial', sans-serif;
@@ -162,32 +164,99 @@
             text-align: center;
             padding: 15px 0;
         }
+          /* Hover Effect */
+          .profile-picture:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Click Animation */
+        .profile-picture:active {
+            animation: pop 0.5s ease-in-out;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+      
+        .profile-picture {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .hidden-email {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+    }
+    
+    .show {
+        max-height: 50px; /* Adjust height as needed */
+    }
+
+    .toggle-btn {
+        background: transparent;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .rotate {
+        transform: rotate(180deg);
+    }
+
     </style>
    </head>
 <body>
+    
     <div class="container">
         <img src="WhatsApp Image 2025-02-21 at 22.05.48_29b76fa3.jpg" alt="Narendrapur-Siwan" class="profile-picture">
         <h1>Harshit Singh</h1>
-        <p>Location: Narendrapur, Siwan</p>
-        <p class="bio">Welcome to my personal profile page, I am Harshit Singh, a passionate individual from Narendrapur.</p>
+        <p>Location: <span id="location-text">Narendrapur, Siwan</span></p>
+       
+
+        <p class="bio">Welcome to my personal profile page. I’m Harshit Singh, a passionate and driven individual dedicated to creativity and innovation.</p>
         <p>WhatsApp: <a href="https://wa.me/7061248804">Message me</a></p>
         <div class="contact-info">
             <p>Email: <a href="mailto:harshitkishoresingh26@gmail.com">harshitkishoresingh26@gmail.com</a></p>
+            
+            <div id="hidden-email" class="hidden-email">
+                <a href="mailto:harshitkishore26@gmail.com">harshitkishore26@gmail.com</a>
+            </div>
+        
+            <button id="toggle-btn" class="toggle-btn">&#9660;</button> <!-- Down Arrow -->
         </div>
+        <script>
+          document.getElementById("toggle-btn").addEventListener("click", function() {
+        let emailDiv = document.getElementById("hidden-email");
+        emailDiv.classList.toggle("show");
+        this.classList.toggle("rotate");
+        
+    });
+        </script>
         <div class="profile-links">
-            <a href="https://www.facebook.com/harshit.singh205?mibextid=kFxxJD" target="_blank">
+            <a href="https://www.linkedin.com/in/harshitsingh205?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn">LinkedIn Profile
+            </a>
+            <a href="https://www.facebook.com/harshitsingh205?mibextid=kFxxJD" target="_blank">
                 <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook">Facebook Profile
             </a>
             <a href="https://www.instagram.com/harshit_singh205?igsh=MWQxYm8zbWh3bDF6MQ==" target="_blank">
                 <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">Instagram Profile
             </a>
-            <a href="https://x.com/Harshit48012109" target="_blank">
+            <a href="https://x.com/harshitsingh205" target="_blank">
                 <img src="https://img.icons8.com/color/48/000000/twitter.png" alt="Twitter">Twitter Profile
             </a>
-            <a href="https://www.linkedin.com/in/harshit-singh-006574273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn">LinkedIn Profile
-            </a>
-            <a href="https://github.com/harshit7061" target="_blank">
+            
+            <a href="https://github.com/harshitsingh205" target="_blank">
                 <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub">GitHub Profile
             </a>
             <a href="https://www.quora.com/profile/Harshit-Singh-3045/" target="_blank">
@@ -200,6 +269,10 @@
             <a href="https://www.paypal.me/harshitkishore26" target="_blank">
                 <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal"> PayPal Profile
             </a>
+            
+            <a href="https://www.snapchat.com/add/harshitsing2226" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/snapchat.png" alt="Snapchat"> Snapchat Profile
+            </a>
             <a href="https://app.netlify.com/teams/harshitkishoresingh26/overview" target="_blank">
                 <img src="NETLIFY.png" alt="Netlify" class="custom-icon">Netlify Profile
             </a>
@@ -207,7 +280,7 @@
                 <img src="https://img.icons8.com/color/48/000000/gitlab.png" alt="GitLab">GitLab Profile
             </a>
             <a href="https://www.youtube.com/@DarkwaveDEV" target="_blank">
-                <img src="https://img.icons8.com/color/48/000000/youtube.png" alt="YouTube">YouTube Channel
+                <img src="downloadyoutube.jpeg" alt="YouTube">YouTube Channel
             </a>
             <a href="https://maps.app.goo.gl/FCTxXtbKTFuvRywUA?g_st=ac" target="_blank">
                 <img src="https://img.icons8.com/color/48/000000/google-maps.png" alt="Google Guide">Google Guide
@@ -222,12 +295,54 @@
                 <a href="https://www.cake.me/me/harshit-singh-aadab6" target="_blank">
                     <img src="imagescake.png" alt="Cake.me"> Cake.me Profile
                 </a>
+           
+                    <a href="https://pin.it/7gh4XbXPT" target="_blank">
+                        <img src="https://img.icons8.com/color/48/000000/pinterest.png" alt="Pinterest"> Pinterest Profile
+                    </a>
+               
+                
+              
+                    <a href="https://forum.freecodecamp.org/u/harshitsingh205/summary" target="_blank">
+                        <img src="https://img.icons8.com/color/48/000000/free-code-camp.png" alt="FreeCodeCamp"> FreeCodeCamp Profile
+                    </a>
+                
+                    <a href="https://stackoverflow.com/users/26606177/harshit-singh?tab=profile" target="_blank">
+                        <img src="https://img.icons8.com/color/48/000000/stackoverflow.png" alt="Stack Overflow"> Stack Overflow Profile
+                    </a>
+                
+                
+               
+                    <a href="https://dev.to/harshitsingh205" target="_blank">
+                        <img src="resized_logo_UQww2soKuUsjaOGNB38o.png" alt="Dev.to"> Dev.to Profile
+                    </a>
+                
+                
+             
+                    <a href="https://hashnode.com/@harshitsingh205" target="_blank">
+                        <img src="download (1)hassnode.png" alt="Hashnode"> Hashnode Profile
+                    </a>
+            
+                
             
         </div>
+ <br>
+ <br>
+ <div style="background-color: white; text-align: center; font-family: Arial, sans-serif;">
+    <h2 style="color: black; margin-bottom: 10px;">Thank You for Visiting!</h2>
     
-    <div class="footer">
-        <p>&copy; 2024 Harshit Singh. All Rights Reserved.</p>
-    </div>
+    <p style="color: #555; font-size: 16px; max-width: 600px; margin: 0 auto;">
+        Stay connected and keep exploring. Feel free to reach out anytime!
+    </p>
+
+    <p style="color: #777; font-size: 14px; margin-top: 15px;">
+        © <span id="year"></span> Harshit Singh. All Rights Reserved.
+    </p>
+</div>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </div>
 </body>
 </html>
